@@ -407,7 +407,7 @@ function fillCityName() {
   var cityDiv, cityText, countryCode;
   for (var i in destinations) {
     cityDiv = '#dest' + i + ' .name';
-    countryCode = destinations[i].currencyCode;
+//     countryCode = destinations[i].currencyCode;
     cityText = destinations[i]['city'] + ', ' + destinations[i]['country'];
     $(cityDiv).text(cityText);
     thingsToDo(i);
@@ -415,25 +415,25 @@ function fillCityName() {
 }
 
 //function to put in currency info into destinations objects
-function fillCurrencyInfo() {
-  var currencyList = currencyResponse.responseJSON.currencies;
-  var rateList = rateResponse.responseJSON.quotes;
+// function fillCurrencyInfo() {
+//   var currencyList = currencyResponse.responseJSON.currencies;
+//   var rateList = rateResponse.responseJSON.quotes;
 
-  var currencyDiv, currencyText, countryCode;
-  debugger;
-  for (var i in destinations) {
-    currencyDiv = '#dest' + i + ' .currency';
-    countryCode = destinations[i].currencyCode;
-    destinations[i].currencyName = currencyList[countryCode];
-    destinations[i].exchangeRate = rateList['USD' + countryCode];
-    currencyText =
-      'US Dollar to ' +
-      destinations[i].currencyName +
-      ' : 1 to ' +
-      destinations[i].exchangeRate;
-    $(currencyDiv).text(currencyText);
-  }
-}
+//   var currencyDiv, currencyText, countryCode;
+//   debugger;
+//   for (var i in destinations) {
+//     currencyDiv = '#dest' + i + ' .currency';
+//     countryCode = destinations[i].currencyCode;
+//     destinations[i].currencyName = currencyList[countryCode];
+//     destinations[i].exchangeRate = rateList['USD' + countryCode];
+//     currencyText =
+//       'US Dollar to ' +
+//       destinations[i].currencyName +
+//       ' : 1 to ' +
+//       destinations[i].exchangeRate;
+//     $(currencyDiv).text(currencyText);
+//   }
+// }
 
 // jQuery.when(currencyResponse, rateResponse).done(fillCurrencyInfo);
 
