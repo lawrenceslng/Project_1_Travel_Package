@@ -296,17 +296,17 @@ var destinations = [
 ];
 
 //-------------------------------------GLOBAL VARIABLES------------------------------
-var currencyURL =
-  'http://apilayer.net/api/list?access_key=a7f50bef8b2879efd43630712a46b389';
-var currencyResponse = $.ajax({
-  url: currencyURL
-});
+// var currencyURL =
+//   'http://apilayer.net/api/list?access_key=a7f50bef8b2879efd43630712a46b389';
+// var currencyResponse = $.ajax({
+//   url: currencyURL
+// });
 
-var rateURL =
-  'http://www.apilayer.net/api/live?access_key=a7f50bef8b2879efd43630712a46b389';
-var rateResponse = $.ajax({
-  url: rateURL
-});
+// var rateURL =
+//   'http://www.apilayer.net/api/live?access_key=a7f50bef8b2879efd43630712a46b389';
+// var rateResponse = $.ajax({
+//   url: rateURL
+// });
 //weather API JS
 var weatherCount = 1;
 // This is our API key. Add your own API key between the ""
@@ -375,7 +375,7 @@ travel_packages.once('value', function(snap) {
     destinations[k].clicks = snap.val()['dest' + k].clicks;
   }
   //then run all the functions that should run on page load
-  fillCurrencyInfo();
+//   fillCurrencyInfo();
   fillCityName(); //move to initalize page functions sections
   displayPriceDuration(); //move to initialize functions
   travelPakage(); //move to initialize functions
@@ -471,7 +471,7 @@ $('#navbarSupportedContent a').on('click', function() {
 
   weatherCount = 1;
   fillCityName();
-  fillCurrencyInfo();
+//   fillCurrencyInfo();
   background();
   displayPriceDuration();
   displayWeather();
